@@ -1,6 +1,6 @@
 #-------------------------------
 # General Site Settings
-baseURL = "http://example.org/"
+baseURL = "https://esapir.github.io/"
 languageCode = "en-us"
 title = "Menca"
 googleAnalytics = "" # Add your identifier. For example UA-99631805-1.
