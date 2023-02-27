@@ -8,6 +8,7 @@
           <div class="hero__left">
             <h1 class="hero__title">{{ .Site.Params.hero.hero__title }}</h1>
             <p class="hero__description">{{ .Site.Params.hero.hero__description }}</p>
+            {{ partial "social-links.html" . }}
             {{ if .Site.Params.mailchimp }}
             <div class="hero__subscribe">
               <form class="subscribe-form validate"

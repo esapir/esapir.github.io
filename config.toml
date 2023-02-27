@@ -2,7 +2,7 @@
 # General Site Settings
 baseURL = "https://esapir.github.io/"
 languageCode = "en-us"
-title = "Menca"
+title = "Erik Sapir"
 googleAnalytics = "" # Add your identifier. For example UA-99631805-1.
 paginate = 9
 
@@ -36,8 +36,7 @@ paginate = 9
 
 
 [params]
-  logo = "" # You can add own logo. For example "/images/logo.png".
-  description = "Menca personal blogging theme for HUGO"
+  description = "Erik Sapir's blog"
 
   #-------------------------------
   # Author Settings
@@ -47,35 +46,20 @@ paginate = 9
     author__avatar = "https://via.placeholder.com/200x200"
 
   [[params.social]]
-    icon = "ion-logo-twitter"
+    icon = "logo-twitter"
     name = "Twitter"
-    link = "https://twitter.com"
+    link = "https://twitter.com/esapir"
 
   [[params.social]]
-    icon = "ion-logo-facebook"
-    name = "Facebook"
-    link = "https://facebook.com"
+    icon = "logo-linkedin"
+    name = "Linkedin"
+    link = "https://www.linkedin.com/in/esapir/"
 
   [[params.social]]
-    icon = "ion-logo-instagram"
-    name = "Instagram"
-    link = "https://instagram.com"
+    icon = "logo-medium"
+    name = "Medium"
+    link = "https://medium.com/@esapir"
 
-  [[params.social]]
-    icon = "ion-logo-pinterest"
-    name = "Pinterest"
-    link = "https://pinterest.com"
-
-  [[params.social]]
-    icon = "ion-logo-youtube"
-    name = "Youtube"
-    link = "https://youtube.com"
-
-  # Example of adding a new link to the author section and footer:
-  # [[params.social]]
-  #   icon = "ion-logo-vimeo"
-  #   name = "Vimeo"
-  #   link = "https://vimeo.com"
 
   # Other icons can be found at https://ionicons.com/v4/
 
@@ -83,64 +67,21 @@ paginate = 9
   #-------------------------------
   # Hero Settings
   [params.hero]
-    hero__title = "Hey, I’m Camelia Mendes"
-    hero__description = "Designs, talks, and writes about web, ethics, privacy, and dev. I share design tutorials, free resources and inspiration."
-    hero__image = "https://via.placeholder.com/1200x800"
-
-  # Newsletter
-  [params.mailchimp]
-    mailchimp__identifier = "frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3" # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
-    mailchimp__input__text = "Subscribe here"
-    mailchimp__button__text = "Get a new tip"
-
-
-  #-------------------------------
-  # Gallery Footer Section
-  [params.gallery]
-    gallery__title = "Gallery"
-    gallery__columns = 3 # You can change the number of gallery columns
-
-  [[params.gallery_image]]
-    image_alt = "Rest"
-    image_url = "https://via.placeholder.com/800x600"
-
-  [[params.gallery_image]]
-    image_alt = "Lifestyle"
-    image_url = "https://via.placeholder.com/800x600"
-
-  [[params.gallery_image]]
-    image_alt = "Hobby"
-    image_url = "https://via.placeholder.com/800x600"
-
-  [[params.gallery_image]]
-    image_alt = "Notes"
-    image_url = "https://via.placeholder.com/800x600"
-
-  [[params.gallery_image]]
-    image_alt = "Rest"
-    image_url = "https://via.placeholder.com/800x600"
-
-  [[params.gallery_image]]
-    image_alt = "Hobby"
-    image_url = "https://via.placeholder.com/800x600"
-
-  [[params.gallery_image]]
-    image_alt = "Fashion"
-    image_url = "https://via.placeholder.com/800x600"
-
-  [[params.gallery_image]]
-    image_alt = "Notes"
-    image_url = "https://via.placeholder.com/800x600"
-
-  [[params.gallery_image]]
-    image_alt = "Rest"
-    image_url = "https://via.placeholder.com/800x600"
+    hero__title = "Hello! I'm Erik Sapir"
+    hero__description = "Technical Leader with two decades of experience writing code and building complex systems. I am passionate and writing about engineering culture, mentoring, system architecture, and more. I enjoy climbing walls, cooking food, and drinking great beer."
+    hero__image = "/images/profile.JPG" 
+# 
+#   # Newsletter
+#   [params.mailchimp]
+#     mailchimp__identifier = "frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3" # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
+#     mailchimp__input__text = "Your email goes here"
+#     mailchimp__button__text = "Update me"
 
 
   #-------------------------------
   # Contact Settings
   [params.contact]
-    email = "your@email.com" # Add your email for contant form
+    email = "esapir@gmail.com" # Add your email for contant form
 
     # NOTE
     # Menca comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
