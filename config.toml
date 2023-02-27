@@ -2,7 +2,7 @@
 # General Site Settings
 baseURL = "https://esapir.github.io/"
 languageCode = "en-us"
-title = "Erik Sapir"
+title = "Erik's Blog"
 googleAnalytics = "" # Add your identifier. For example UA-99631805-1.
 paginate = 9
 
@@ -68,7 +68,7 @@ paginate = 9
   # Hero Settings
   [params.hero]
     hero__title = "Hello! I'm Erik Sapir"
-    hero__description = "Technical Leader with two decades of experience writing code and building complex systems. I am passionate and writing about engineering culture, mentoring, system architecture, and more. I enjoy climbing walls, cooking food, and drinking great beer."
+    hero__description = "As a Technical Leader with two decades of experience writing code and building complex systems, I am passionate about engineering culture, startups, mentoring, coding, system architecture, and more. When I'm not working, you can find me climbing walls, cooking, enjoying a great beer and mostly spending time with Rony, my 4-year-old son."
     hero__image = "/images/profile.JPG" 
 # 
 #   # Newsletter
