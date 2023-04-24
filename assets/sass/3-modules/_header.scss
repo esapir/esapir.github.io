@@ -1,11 +1,13 @@
 /* Header */
 .header {
+  background-color: var(--fantasy);
+
   .header__inner {
     position: relative;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 24px $base-spacing-unit;
+    padding: 30px $base-spacing-unit;    
   
     @media only screen and (max-width: $desktop) {
       padding: 40px $base-spacing-unit;
@@ -22,9 +24,8 @@
   padding: 4px 0;
   font-family: $heading-font-family;
   font-size: 28px;
-  letter-spacing: -1px;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 500;
   transition: color .25s ease;
 
   &:hover {

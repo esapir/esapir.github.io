@@ -72,7 +72,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 0px;
 
     .social__item:first-child > .social__link {
       padding-left: 0;
@@ -131,7 +131,7 @@
   .footer__info-box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   @media only screen and (max-width: $desktop) {
@@ -165,7 +165,9 @@
   text-align: center;
   border-radius: 8px;
   color: var(--heading-font-color);
-  background-color: var(--background-alt-color);
+  background-color: 'none';
   cursor: pointer;
   transition: all .25s ease;
+  display: flex;
+  align-items: center;
 }

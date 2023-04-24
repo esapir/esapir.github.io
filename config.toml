@@ -2,7 +2,7 @@
 # General Site Settings
 baseURL = "https://esapir.github.io/"
 languageCode = "en-us"
-title = "Erik's Blog"
+title = "Erik Sapir"
 googleAnalytics = "" # Add your identifier. For example UA-99631805-1.
 paginate = 9
 
@@ -37,6 +37,7 @@ paginate = 9
 
 [params]
   description = "Erik Sapir's blog"
+  logo = "/images/logo-no-background.svg"
 
   #-------------------------------
   # Author Settings
@@ -60,6 +61,11 @@ paginate = 9
     name = "Medium"
     link = "https://medium.com/@esapir"
 
+  [[params.social]]
+    icon = "calendar-number"
+    name = "Calendly"
+    link = "https://calendly.com/eriksapir/mentoring"
+
 
   # Other icons can be found at https://ionicons.com/v4/
 
@@ -67,9 +73,9 @@ paginate = 9
   #-------------------------------
   # Hero Settings
   [params.hero]
-    hero__title = "Hello! I'm Erik Sapir"
-    hero__description = "As a Technical Leader with two decades of experience writing code and building complex systems, I am passionate about engineering culture, startups, mentoring, coding, system architecture, and more. When I'm not working, you can find me climbing walls, cooking, enjoying a great beer and mostly spending time with Rony, my 4-year-old son."
-    hero__image = "/images/profile.JPG" 
+    hero__title = "Welcome! I'm Erik Sapir"
+    hero__description = "I am a technical leader and have been building complex system for the last two decades. I am passionate about engineering culture, startups, mentoring, coding and system architecture."
+    hero__image = "/images/profile.jpg" 
 # 
 #   # Newsletter
 #   [params.mailchimp]

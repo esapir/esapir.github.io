@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  That which does not kill us makes us stronger
-description: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative a...
-date:   2020-11-14 15:01:35 +0300
+title:  Let’s Reverse Engineer Wilco
+description: What will we discover when we try to reverse engineer the Wilco web application? And what can we learn from that? Let's find out!
+date: 2023-01-26
 image:  'https://via.placeholder.com/1200x800'
 video_embed: 'https://www.youtube.com/embed/NpEaa2P7qZI'
 tags:   [workflow, hobby, study]
