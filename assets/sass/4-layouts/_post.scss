@@ -2,6 +2,9 @@
 .post-head,
 .page-head {
   margin-bottom: 48px;
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column;
 
   .row {
     align-items: center;
@@ -16,16 +19,26 @@
   }
 }
 
-.post-image,
+.post-image {
+  position: relative;
+  max-height: 800px;
+  margin-top: 20px;  
+  // width: auto;
+  overflow: hidden;
+}
+
 .page-image {
   position: relative;
   transform: translate(0);
   padding-top: 90%;
-  min-height: 280px;
+  max-height: 580px;
+  // max-width: 500px;
+  width: auto;
+  height: auto;
   border-radius: 8px;
   overflow: hidden;
   background: var(--background-alt-color);
-
+ 
   img {
     position: absolute;
     top: 0;
@@ -96,7 +109,7 @@
   margin-left: 44px;
 
   &.post__info-video {
-    max-width: 760px;
+    // max-width: 760px;
     margin: 0 auto;
   }
 
@@ -106,7 +119,7 @@
 }
 
 .page__info {
-  max-width: 760px;
+  // max-width: 760px;
   margin: 0 auto;
 }
 
@@ -141,11 +154,14 @@
 
 .post__title,
 .page__title {
-  margin-bottom: 24px;
+  margin-top: 24px;
+  margin-bottom: 5px;
   font-size: 46px;
   line-height: 1.2;
   font-weight: 700;
-  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: var(--heading-font-color);
 
   @media only screen and (max-width: $mobile) {
     margin-bottom: 20px;
@@ -161,27 +177,9 @@
   display: flex;
   align-items: center;
   line-height: 1;
-
-  .post__author-image {
-    position: relative;
-    transform: translate(0);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 12px;
-    background-color: var(--background-alt-color);
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      user-select: none;
-    }
-  }
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 600;
 
   .post__meta-bottom {
     display: flex;
@@ -202,18 +200,14 @@
       text-decoration-color: var(--heading-font-color);
     }
   }
-
-  .post__date {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--text-alt-color);
-  }
 }
 
 .post,
 .page {
-  max-width: 760px;
-  margin: 0 auto 60px;
+  margin-top: 34px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
   color: var(--text-color);
   font-size: 18px;
 
@@ -239,7 +233,7 @@
   img[src$='#wide'] {
     display: block;
     width: 100vw;
-    max-width: none;
+    // max-width: none;
     margin-left: 50%;
     transform: translateX(-50%);
     border-radius: 0;

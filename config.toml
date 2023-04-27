@@ -74,7 +74,7 @@ paginate = 9
   # Hero Settings
   [params.hero]
     hero__title = "Welcome! I'm Erik Sapir"
-    hero__description = "I am a technical leader and have been building complex system for the last two decades. I am passionate about engineering culture, startups, mentoring, coding and system architecture."
+    hero__description = "Dad · Software Engineer · Technical Leader · Mentor · Startups Addict · Climber"
     hero__image = "/images/profile.jpg" 
 # 
 #   # Newsletter
