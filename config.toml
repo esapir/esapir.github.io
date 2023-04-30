@@ -22,18 +22,6 @@ paginate = 9
     url = "/about"
     weight = 2
 
-  [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact"
-    weight = 3
-
-  [[menu.main]]
-    identifier = "elements"
-    name = "Elements"
-    url = "/elements"
-    weight = 4
-
 
 [params]
   description = "Erik Sapir's blog"
@@ -73,7 +61,7 @@ paginate = 9
   #-------------------------------
   # Hero Settings
   [params.hero]
-    hero__title = "Welcome! I'm Erik Sapir"
+    hero__title = "Welcome! I'm Erik"
     hero__description = "Dad · Software Engineer · Technical Leader · Mentor · Startups Addict · Climber"
     hero__image = "/images/profile.jpg" 
 # 
@@ -107,8 +95,5 @@ paginate = 9
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-
 [markup.highlight]
-  codeFences = true
-  guessSyntax = true
-  noClasses = false
+  style = "github-dark"

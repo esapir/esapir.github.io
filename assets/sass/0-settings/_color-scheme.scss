@@ -11,6 +11,7 @@
   --dark-blue: #1e2740;
   --black-ligther: #17181e;
   --fantasy: #f8efea;
+  --dark-purple: #5d2f86;
 
   --background-color: var(--white);
   --background-alt-color: var(--white);
@@ -23,6 +24,9 @@
   --link-color: var(--black-ligther);
   --link-color-hover: var(--black-lither);
 
+  --link-in-page-color: var(--dark-purple);
+  --link-in-page-color-hover: var(--dark-purple);
+
   --button-color: var(--white);
   --button-background-color: var(--brand-color);
   --button-background-hover: #4f31c7;
@@ -33,7 +37,7 @@
   --th-color: var(--light-gray);
   --tr-color: var(--light-gray);
 
-  --syntax-highlighting-background: #f3f3f3;
+  --syntax-highlighting-background: #000000;
 }
 
 :root[dark] {

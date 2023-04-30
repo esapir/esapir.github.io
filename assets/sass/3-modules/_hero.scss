@@ -1,12 +1,12 @@
 /* Hero */
 .hero {
   padding: 30px 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   background-color: var(--background-alt-color);
 
-  @media only screen and (max-width: $mobile) {
-    padding: 60px 0;
-    margin-bottom: 60px;
+  @media only screen and (max-width: $tablet) {
+    padding: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -17,18 +17,13 @@
   font-size: 30px;
   font-weight: 700;
   color: var(--heading-font-color);
-  
-
-  @media only screen and (max-width: $desktop) {
-    font-size: 50px;
-  }
 
   @media only screen and (max-width: $tablet) {
-    font-size: 40px;
+    font-size: 28px;
   }
 
   @media only screen and (max-width: $mobile) {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
@@ -41,8 +36,12 @@
   color: var(--text-alt-color);
   text-align: center;
 
-  @media only screen and (max-width: $desktop) {
-    font-size: inherit;
+  @media only screen and (max-width: $tablet) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 16px;
   }
 }
 
@@ -110,19 +109,6 @@
   }
 }
 
-.hero__right {
-  width: 50%;
-
-  @media only screen and (max-width: $desktop) {
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  @media only screen and (max-width: $mobile) {
-    margin-top: 32px;
-  }
-}
-
 .hero_col {
   display: flex;
   justify-content: center;
@@ -133,7 +119,7 @@
 
 .hero__image {
   position: relative;
-  // transform: translate(0);
+  transform: translate(0);
   width: 200px;
   height: 200px;
   border-radius: 100%;

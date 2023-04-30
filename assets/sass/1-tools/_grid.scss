@@ -16,19 +16,19 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
   margin: 0 auto;
 
   @media only screen and (max-width: 1140px) {
-    max-width: 80%;
+    max-width: 70%;
   }
 
   @media only screen and (max-width: $desktop) {
-    max-width: 85%;
+    max-width: 80%;
   }
 
   @media only screen and (max-width: $tablet) {
-    max-width: 90%;
+    max-width: 95%;
   }
 
   @media only screen and (max-width: $mobile) {
-    max-width: 95%;
+    max-width: 100%;
     padding-left: calc(#{$container-offset} + 4px);
     padding-right: calc(#{$container-offset} + 4px);
   }

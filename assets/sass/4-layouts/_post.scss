@@ -212,12 +212,10 @@
   font-size: 18px;
 
   a {
-    font-weight: 500;
-    border-bottom: 1px solid var(--border-color);
-
+    font-weight: 600;
+    color: var(--link-in-page-color);
     &:hover {
-      color: var(--link-color);
-      border-bottom-color: var(--link-color-hover);
+      color: var(--link-in-page-color);
     }
   }
 
