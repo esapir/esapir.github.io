@@ -16,7 +16,7 @@ If you’re lucky, there’s a perfect replacement with similar integration. If 
 
 And so, today, we will look at tackling a project of replacing a critical dependency. In our case, it was replacing Slack with Snack. 
 
-## Wait, what? Slack? Snack?
+#### Wait, what? Slack? Snack?
 Corporate messengers are an integral part of software engineers’ work. Most often, it’s our most basic communication tool at work. And since at Wilco we aim to simulate a real working environment, we’ve decided very early on to integrate with Slack. 
 
 Up until a few months ago, connecting Slack to Wilco was part of every new user’s onboarding. This is how they received assignments and communicated with co-workers like their R&D manager, Ness, and Navi, the DevOps guy. Both are bots, by the way, or so we have been told — my attempts to look at their code were rebuffed for some reason, and they sometimes send me messages asking if I can hear the voices too. But never mind that. 
@@ -37,7 +37,7 @@ So we decided it was time to replace Slack with our very own messaging app, Snac
 
 The project's main goal was to find and integrate a new service that would manage all the conversation data between our users and the bots while allowing us much more control over the experience.
 
-## Research, Discussion; POC, Discussion
+#### Research, Discussion; POC, Discussion
 This kind of task typically starts with a research phase. An engineer will spend a few days researching the available options. At this point, there are two alternatives:
 
 1. The engineer will choose the best option, develop a quick POC, and continue with the implementation.
@@ -52,7 +52,7 @@ In our Slack to Snack project, we used Google Slides and Notion to summarize and
 
 ![notion](/images/posts/slack-to-snack/notion.png)
 
-## Refactor when it makes sense. Rewrite otherwise.
+#### Refactor when it makes sense. Rewrite otherwise.
 Business logic code should be separated from third-party service specifics. We all know that, right? But in many real-world scenarios, this is not the case. Slack was integrated into Wilco at a very early stage of the startup, when the requirements changed rapidly and code was modified repeatedly. We ended up with business logic code tightly coupled to the Slack integration code.
 
 Integrating CometChat into the existing code would have been difficult and would result in even more coupling and complexity. Our intuition in such cases is to start with refactoring:
@@ -69,20 +69,20 @@ Just like with refactoring, rewriting logic starts with unit tests. However, in 
 
 Now, if we will decide to switch to another service, this will be a much simpler task!
 
-## Break into small production-ready chunks
+#### Break into small production-ready chunks
 Projects like this take a few weeks, and sometimes more, to be fully ready for production. But does it mean we must wait so long until the new service is functional? Not necessarily!
 
 Usually, we can break a project into smaller pieces. Each can be deployed to production as soon as it is ready. Ideally, we can easily replace the old functionality with the new one. When this is impossible, we should try to parallelize the two services. This was also our strategy when replacing Slack with Snack.
 
 First, we implemented the registration functionality, adding all new registering Wilco users to CometChat. They still used Slack just as before, but we could start building our user base in CometChat. Then we parallelized sending all messages to both Slack and CometChat. We sent messages from our bots to both services, and every message sent by the users in Slack was intercepted by our server and sent to CometChat as well. Not only did this allow us to test the message-sending functionality thoroughly, but when we were ready to switch to Snack, all users’ conversations were already in CometChat. Finally, when the majority of the features were ready, we could start testing the entire flow in production. We used [split](https://www.split.io/) to first allow access to Snack only for Wilco employees and then gradually rolled it out to the users. Every few days, we switched part of our users to using Snack, and the transition process was complete after a few weeks.
 
-## What about the old code?
+#### What about the old code?
 Hooray! The replacement process is complete, and all users are now using the new service. All that’s left is to decide what to do with the old code.
 
 The worst thing we can decide is to just keep it. We might tell ourselves that a major bug could be discovered in the new service, and we will have to switch back quickly. This is true, and I believe it is worth keeping the old service functional for a short period of time. But code starts rotting the moment it stops being in use. Our codebase is changing rapidly, and code that’s not in use will slowly but surely cease to be functional. Not only that, but we will also have to consider this code when adding new features or modifying existing APIs.
 
 Once we feel comfortable with the new code, we can have fun with the absolute best part of the process: deleting old code.
 
-## What a journey
+#### What a journey
 We started with research and POC, followed by a team discussion. Next, we identified parts of the code that should be refactored and parts of the code that are better to be rewritten. Unit tests were used to document existing behaviors and give us confidence when replicating them to use the new service. Splitting the project into small production-ready tasks and parallelizing Slack and CometChat allowed us to deploy to production early and start testing while keeping Slack fully functional. We first opened Snack to internal users and slowly rolled it out to all users. Finally, we celebrated by deleting old code. Win!
 

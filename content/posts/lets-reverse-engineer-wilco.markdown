@@ -16,7 +16,7 @@ In a dream scenario, every request to reverse-engineer something would come to u
 
 This blog post will illustrate the power of reverse engineering by applying it to Wilco. Using tools and information available to all Wilco users, we will reveal some of Wilco's architecture and better understand how Wilco works under the hood.
 
-## Let's start with the basics
+#### Let's start with the basics
 Go ahead, and log in to [Wilco](https://app.wilco.gg/). Most people will look at the website and see a black box full of features. But quite a lot can be revealed using the web development tools that are available in most modern browsers. Using these tools, we can inspect and debug the sources loaded by the page, get information about network usage, analyze performance, and much more. For the purpose of this exercise, we will use the [Google Chrome developer tools](https://developer.chrome.com/docs/devtools/).
 
 Looking at the sources tab, we can find the javascript files loaded to present the webpage. We don’t need to dig too deep to figure out that *the frontend is built using React* and uses [Chakra-UI](https://chakra-ui.com/) as its react components framework.
@@ -39,7 +39,7 @@ Let’s add the backend URL, drawn from the get user request URL, to the informa
 
 Did you notice the web sockets sent from the backend to the frontend? No worries, you didn't miss anything, as we didn't discuss these messages. Can you identify them in the developer tools?
 
-## How did they know?
+#### How did they know?
 It's time to start playing Wilco quests. To progress, users will need to modify code, and open pull requests that our bots will review. In addition, they will need to make changes to their Heroku apps or configure their New Relic accounts. One of the most common responses from Wilco users is: "how did they know?". How did Wilco know that a pull request was opened, new code was pushed to the branch, or a new env var was added to their app?
 
 The Wilco Quest Builder [SDK Documentation](https://dev.trywilco.com/) is an excellent place to start figuring that out. This documentation teaches how quests are structured and how to create new quests. For example, we learn that Wilco quests are built from steps, each of which awaits a single trigger in the form of a user action. Among the [triggers](https://dev.trywilco.com/docs/building-your-quest/triggers-and-payloads.html#triggers), we can find heroku_release_created, user_message, and github_pr_livecycle_status with eventType being one of github_pr_opened, github_pr_workflow_success, git_pr_workflow_failure or github_pr_merged.
@@ -56,7 +56,7 @@ We can safely conclude that webhooks are used by all those external services to 
 
 ![architecture_2](/images/posts/reverse-engineering/architecture_2.png)
 
-## How does Wilco test my code?
+#### How does Wilco test my code?
 Pull requests are a part of almost every Wilco quest. There are different requirements for each quest, so how does Wilco know whether to approve or reject the code changes?
 
 A failed PR check is usually the first sign that a pull request has been rejected. Taking a look at failed PR checks might provide us with some interesting information about Wilco:
@@ -110,5 +110,5 @@ I believe we are ready for the final drawing of the WIlco architecture:
 
 There is, again, a piece of information in the drawing we did not discuss, the AWS S3. Take a second look at the Wilco Checks; you will find it there.
 
-## Wow, we have learned so much!
+#### Wow, we have learned so much!
 We started with what seemed like a black box, a system we knew nothing about. By poking and prodding it, we’ve learned a lot about how it is built and works. And the coolest part is that we did it using tools freely available to all users. This is exactly what reverse engineering is all about. Now it’s your turn: select an application you like and use frequently, and try to reverse-engineer it. You will be surprised by how much you will find and, more importantly, how much you will learn and improve your skills in the process.
