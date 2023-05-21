@@ -62,7 +62,7 @@ paginate = 9
   # Hero Settings
   [params.hero]
     hero__title = "Welcome! I'm Erik"
-    hero__description = "Dad · Software Engineer · Technical Leader · Mentor · Startups Addict · Climber"
+    hero__description = "Dad · Software Engineer · Technical Leader · Mentor · Startups-Addict · Climber"
     hero__image = "/images/profile_me.jpg" 
 # 
 #   # Newsletter
