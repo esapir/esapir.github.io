@@ -8,8 +8,6 @@ image:  '/images/posts/slack-to-snack/slack-to-snack.jpeg'
 tags:   [architecture, refactoring, wilco]
 ---
 
- ###### *This post was originally published on the [Wilco](https://www.trywilco.com/blog) blog*
-
 It’s a story as old as time: your team is responsible for a major system feature that’s widely used, but it’s not just your code that makes it work. There’s a third-party dependency: an external platform, a database, a library — something that’s there seemingly for the long run. But one day, your team can no longer rely on that dependency. There can be many reasons for this, from performance to missing features to pricing. And so, a search for a replacement is launched. 
 
 If you’re lucky, there’s a perfect replacement with similar integration. If you’re even luckier, the business logic is well separated from the third-party integration code. Don’t count on it, though—few people are **that** lucky. 
@@ -86,3 +84,5 @@ Once we feel comfortable with the new code, we can have fun with the absolute be
 #### What a journey
 We started with research and POC, followed by a team discussion. Next, we identified parts of the code that should be refactored and parts of the code that are better to be rewritten. Unit tests were used to document existing behaviors and give us confidence when replicating them to use the new service. Splitting the project into small production-ready tasks and parallelizing Slack and CometChat allowed us to deploy to production early and start testing while keeping Slack fully functional. We first opened Snack to internal users and slowly rolled it out to all users. Finally, we celebrated by deleting old code. Win!
 
+
+###### *This post was originally published on the [Wilco](https://www.trywilco.com/blog) blog*

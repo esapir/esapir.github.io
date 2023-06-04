@@ -8,8 +8,6 @@ image:  '/images/posts/reverse-engineering/reverse-engineering.png'
 tags:   [architecture, reverse-engineering, wilco]
 ---
 
- ###### *This post was originally published on the [Wilco](https://www.trywilco.com/blog) blog*
-
 If you are a software engineer, it’s likely that you’ve already been asked to reverse-engineer someone else’s feature. Was it someone from Product, who came to you and asked to build a feature “that works exactly, but exactly, like in this other app?” Or did the request come from Marketing? In any case, it happens all the time and makes perfect sense. Given limited resources, it’s usually better to spend them on innovation rather than on trying to reinvent the wheel.
 
 In a dream scenario, every request to reverse-engineer something would come to us with a detailed design and architecture document. And hey, sometimes — mostly when you’re drawing inspiration from an open-source product — it actually happens. But more often than not, the only thing you have to go by is the product itself. 
@@ -112,3 +110,6 @@ There is, again, a piece of information in the drawing we did not discuss, the A
 
 #### Wow, we have learned so much!
 We started with what seemed like a black box, a system we knew nothing about. By poking and prodding it, we’ve learned a lot about how it is built and works. And the coolest part is that we did it using tools freely available to all users. This is exactly what reverse engineering is all about. Now it’s your turn: select an application you like and use frequently, and try to reverse-engineer it. You will be surprised by how much you will find and, more importantly, how much you will learn and improve your skills in the process.
+
+
+###### *This post was originally published on the [Wilco](https://www.trywilco.com/blog) blog*

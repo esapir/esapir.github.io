@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  One Session to Rule Them All
+title:  Stop Being a Lazy Interviewer
 description: How you can manage a single user session across multiple clients
-date: 2022-05-02
+date: 2023-02-06
 minutes: 6
-image:  '/images/posts/one-session-to-rule-them-all/fingerprint.png'
-tags:   [session-management, authorization, auth0, wilco]
+image:  '/images/posts/stop-begin-a-lazy-engineer/cover.png'
+tags:   [interviews]
 ---
 
 Today, it’s common for web and mobile applications to hide some or even all of their functionality behind a user authentication prompt. And while registration using email and password is still the standard, most apps prefer to complement it with trusted social networking services (SNS) which have authentication capabilities for 3rd party software. Google, Facebook, and Discord are some of the larger ones, but there are many more out there.
@@ -116,6 +116,3 @@ Another solution to this edge case is to have the app server notify all clients 
 
 #### Wrapping up...
 We started with only one website allowing users to authenticate themselves and ended up with multiple clients providing a seamless login and a unified logout. More clients can be added freely as long as they share the same primary domain.
-
-
-###### *This post was originally published on the [Wilco](https://www.trywilco.com/blog) blog*
